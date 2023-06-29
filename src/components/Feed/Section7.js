@@ -16,27 +16,26 @@ function Section7() {
     },
     {
       class: "reliable",
-      pos: "-102px",
       heading: "100% Reliable",
       text: "Regulated by IRDAI",
     },
     {
       class: "claim-support",
-      pos: "0",
       heading: "Claims Support",
       text: "Made stress-free",
     },
     {
       class: "happy-help",
-      pos: "-206px",
       heading: "Happy to Help",
       text: "Every day of the week",
     },
   ];
   return (
     <>
-      <h2>PB Advantage</h2>
-      <span></span>
+      <h2>
+        PB Advantage
+        <span></span>
+      </h2>
       <br />
       <p className="text-header">
         When you buy insurance from us, you get more than just financial safety.

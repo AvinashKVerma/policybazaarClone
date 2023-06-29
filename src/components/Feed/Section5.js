@@ -19,7 +19,6 @@ function Section5() {
             customers trust us & have bought their insurance on Policybazaar
           </p>
         </div>
-        &ensp;
         <div className="info-box insurer">
           <span className="top-icon"></span>
           <p className="head">50+ insurers</p>
@@ -34,7 +33,6 @@ function Section5() {
             for all kinds of insurance plans available online
           </p>
         </div>
-        &ensp;
         <div className="info-box claims">
           <span className="top-icon"></span>
           <p className="head">Claims</p>
@@ -43,7 +41,6 @@ function Section5() {
             most
           </p>
         </div>
-        &ensp;
       </div>
     </div>
   );

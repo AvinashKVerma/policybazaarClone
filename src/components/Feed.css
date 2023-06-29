@@ -250,3 +250,10 @@
     padding-bottom: 20px;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .mid-row .container {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+  }
+}

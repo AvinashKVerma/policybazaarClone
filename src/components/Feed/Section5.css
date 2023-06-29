@@ -150,6 +150,11 @@
   .best-place .container .left-block {
     padding-bottom: 0;
   }
+  .best-place .container .left-block .txt-block {
+    margin-top: 40px;
+    margin-left: 0;
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -158,6 +163,15 @@
   }
   .best-place .container .left-block .txt-block.opacity-1 {
     margin-left: 16px;
+  }
+  .best-place .container .left-block .txt-block {
+    margin-top: 20px;
+    margin-left: 0;
+    opacity: 1;
+    width: calc(53% + 10px);
+    margin-left: 10px;
+    font-size: 18px;
+    line-height: 26px;
   }
   .best-place .container .right-block {
     display: -webkit-box;
@@ -175,9 +189,46 @@
     margin-bottom: 20px;
     margin-top: 20px;
   }
+  .best-place .container .right-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    margin-top: 0px;
+    opacity: 1;
+    width: 47%;
+    scrollbar-width: none;
+  }
+
+  .best-place .container .right-block .info-box {
+    min-width: 140px;
+    margin-right: 16px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .best-place .container .right-block .info-box p.copy {
+    font-size: 12px;
+    opacity: 0.6;
+    line-height: 16px;
+  }
+  .best-place .container .right-block .info-box {
+    min-width: 140px;
+    margin-right: 16px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .best-place .container .right-block .info-box.insurer {
+    margin: 20px 16px 0 0;
+  }
+  .best-place .container .right-block .info-box.lowest-price {
+    margin: 20px 16px 20px 0;
+  }
+  .best-place .container .right-block .info-box.claims {
+    margin: 20px 16px 0 0;
+  }
 }
 
-@media (max-width: 1023px) {
+@media (min-width: 641px) and (max-width: 1023px) {
   .best-place .container .left-block .txt-block.opacity-1 {
     margin-left: 16px;
   }
@@ -195,5 +246,49 @@
     min-width: 140px;
     margin-right: 16px;
     margin-bottom: 0;
+  }
+  .best-place .container .left-block .txt-block {
+    font-size: 24px;
+    line-height: 32px;
+    margin-left: 16px;
+    width: 240px;
+  }
+  .best-place .container .right-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    margin-top: 0px;
+    opacity: 1;
+    width: calc(100% - 240px);
+    scrollbar-width: none;
+  }
+  .best-place .container .right-block .info-box.insurer {
+    margin: 40px 16px 0 0;
+  }
+  .best-place .container .right-block .info-box {
+    min-width: 140px;
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
+  .best-place .container .right-block .info-box.lowest-price {
+    margin: 40px 16px 20px 0;
+  }
+  .best-place .container .right-block .info-box.claims {
+    margin: 40px 16px 0 0;
+  }
+}
+
+@media (min-width: 1024) and (max-width: 1140px) {
+  .best-place .container .left-block .txt-block {
+    font-size: 32px;
+    line-height: 46px;
+  }
+}
+
+@media (max-width: 980px) {
+  .best-place .container .right-block .info-box p.copy {
+    font-size: 12px;
+    line-height: 16px;
   }
 }
