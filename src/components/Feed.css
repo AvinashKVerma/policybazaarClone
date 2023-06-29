@@ -257,3 +257,11 @@
     margin: 0 10px;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .app-block {
+    padding: 30px 0 0;
+    position: relative;
+    margin-bottom: 40px;
+  }
+}

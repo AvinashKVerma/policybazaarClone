@@ -30,6 +30,9 @@ function Section8() {
       </div>
       <div className="mobile">
         <img src={img} className="lazy app store" alt="app" />
+        <a href="/#" className="install-now">
+          GET THE APP NOW
+        </a>
       </div>
     </>
   );
