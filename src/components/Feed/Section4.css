@@ -167,3 +167,9 @@
 .blk-prd .container.featurebanner {
   padding-bottom: 0px;
 }
+
+@media (max-width: 1200px) {
+  .blk-prd .container .prd-bg.home-insurance {
+    width: fit-content;
+  }
+}

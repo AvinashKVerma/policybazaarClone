@@ -593,10 +593,8 @@ ul.navbar-list > li > ul.support-ui > li a p {
     left: 4px;
   }
   .logo-pb {
-    display: inherit;
     width: 160px;
     margin-top: 16px;
-    position: fixed;
   }
   .mob-menu .mobile-signin {
     border: 1px solid #0065ff;
@@ -739,8 +737,19 @@ ul.navbar-list > li > ul.support-ui > li a p {
   .mob-menu .logo-pb {
     width: 170px;
     height: 30px;
-    display: inline-block;
+    display: inline-flex;
     margin: 22px 0 0 0;
     vertical-align: top;
+  }
+}
+
+@media (min-width: 320px) {
+  .mob-menu .logo-pb {
+    width: 160px;
+    margin-top: 16px;
+  }
+  .mob-menu .logo-pb .logo {
+    width: 150px;
+    height: 46px;
   }
 }

@@ -425,14 +425,7 @@ function Header() {
               <span></span>
             </div>
           </div>
-          <div className="logo-pb">
-            <a className="logo" href="/#">
-              {logo1}
-            </a>
-          </div>
-          <div className="mobile-signin">
-            <a href="/#">Sign In</a>
-          </div>
+
           <div className="menu-list active">
             <nav className="nav">
               <ul className="nav__list nav-with-support mr-top0">
@@ -452,6 +445,14 @@ function Header() {
               </ul>
             </nav>
           </div>
+        </div>
+        <div className="logo-pb">
+          <a className="logo" href="/#">
+            {logo1}
+          </a>
+        </div>
+        <div className="mobile-signin">
+          <a href="/#">Sign In</a>
         </div>
       </div>
     </>
