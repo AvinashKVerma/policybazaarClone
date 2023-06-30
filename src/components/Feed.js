@@ -54,13 +54,13 @@ function Feed() {
         </div>
       </div>
       <div className="customers-saying">
-        <div className="container">
+        <div className="container containerr">
           <Section9 />
         </div>
       </div>
       <div className="ourpartner">
         <div className="ptable">
-          <div className="container">
+          <div className="container containnerrr">
             <Section10 />
           </div>
         </div>

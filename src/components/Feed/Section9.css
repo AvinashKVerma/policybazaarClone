@@ -15,35 +15,8 @@
   display: block;
 }
 
-.customers-saying .container .row {
-  background-image: url(../Resources/img25.avif) no-repeat center -100px;
-}
-
-.customers-saying .container .row {
-  position: relative;
-  background-size: 100%;
-  padding-top: 80px;
-  padding-bottom: 50px;
-  margin-bottom: 0;
-}
-
-.customers-saying .container .row {
-  position: relative;
-  background-size: 100%;
-  min-height: 550px;
-  padding-top: 80px;
-  margin-bottom: 30px;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: center -100px;
-}
-
 .testimonial-new {
   width: 100%;
-}
-
-.customers-saying .slick-list {
-  padding: 0 !important;
 }
 
 .customers-saying .container .row .slick-track {
@@ -59,6 +32,7 @@
   margin: 20px 10px 14px 20px;
   border-radius: 4px;
   height: 290px;
+  min-width: 190px;
 }
 
 .customers-saying .container .row .testimonial-new .block .customer {
@@ -123,34 +97,118 @@
   position: initial;
 }
 
-.block .customer {
-  color: #212121;
-  font-size: 16px;
-  text-align: center;
-  font-weight: 500;
-  padding-bottom: 20px;
-}
-.block p.copy::before {
-  width: 16px;
-  height: 20px;
-  margin: 0 auto 10px;
-  content: "";
-  background: url(../Resources/img26.webp) no-repeat;
-  display: block;
-}
-
 .block p.copy {
   color: #243757;
   font-size: 14px;
   line-height: 22px;
   text-align: center;
 }
+@media (min-width: 1024px) {
+  .customers-saying .container .row {
+    position: relative;
+    background: url(../Resources/img25.avif) no-repeat center -100px;
+    background-size: 100%;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    margin-bottom: 0;
+    min-height: 550px;
+  }
+}
 
-.customers-saying .container .row {
+@media only screen and (max-width: 1024px) {
+  .customers-saying .container .h2 {
+    text-align: center;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 20px;
+  }
+  .customers-saying .container .h2 span {
+    margin: 10px auto 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .customers-saying .container .row {
+    min-height: 400px;
+    background: url(../Resources/img25.avif) no-repeat center -40px;
+    background-size: auto;
+    background-size: cover;
+    padding-top: 0;
+    padding-bottom: 28px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .customers-saying .container .h2 {
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 20px;
+  }
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@media (min-width: 1200px) {
+  .containerr {
+    width: 1170px;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .containerr {
+    width: 960px;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .containerr {
+    width: 720px;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .containerr {
+    width: 540px;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.customers-saying {
+  padding: 20px 0;
+}
+
+.customers-saying .container {
+  max-width: 1140px;
+  margin: 0 auto;
   position: relative;
-  background: url(../Resources/img25.avif) no-repeat center -100px;
-  background-size: 100%;
-  padding-top: 80px;
-  padding-bottom: 50px;
-  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 760px) {
+  .containerr {
+    width: 90%;
+    max-width: 100%;
+  }
+  .customers-saying .container .row {
+    background: url(../Resources/img34.avif) no-repeat center -70px;
+    background-size: 80%;
+  }
 }

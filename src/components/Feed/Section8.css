@@ -108,6 +108,13 @@ img {
     text-align: center;
     margin-top: 20px;
   }
+  .app-block .container .copy-part p.control {
+    padding-bottom: 20px;
+  }
+  .app-block .container .copy-part p.text-head {
+    font-size: 18px;
+    padding: 20px 0 0;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -183,5 +190,12 @@ img {
     margin: 30px 0 0;
     text-decoration: none;
     color: #fff;
+  }
+  .app-block .container .copy-part p.line {
+    display: none;
+  }
+  .app-block .container .copy-part p.control {
+    padding-bottom: 20px;
+    font-size: 14px;
   }
 }
