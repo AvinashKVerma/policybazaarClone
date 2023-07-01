@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Header.css";
 import { ReactComponent as Logo } from "../Resources/logopb.svg";
 import { ReactComponent as Logo1 } from "../Resources/logopb1.svg";
+import img from "../Resources/img36.png";
 
 function Header() {
   const logo = <Logo />;
@@ -89,6 +90,16 @@ function Header() {
     "Track existing claim",
   ];
 
+  const hamMenu = [
+    { span: "ticket", pos: "-6px -55px", heading: "Get help" },
+    {
+      span: "mcp",
+      pos: "-6px -765px",
+      heading: "Manage communication preferences",
+    },
+    { span: "advisor", pos: "-6px -156px", heading: "Verify your advisor" },
+  ];
+
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const handleDropdownToggle = () => {
@@ -113,10 +124,48 @@ function Header() {
     setDropdownOpen3(!isDropdownOpen3);
   };
 
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [term, setTerm] = useState(false);
+  const [health, setHealth] = useState(false);
+  const [motor, setMotor] = useState(false);
+  const [inves, setInves] = useState(false);
+  const [other, setOther] = useState(false);
+
   const handleClick = () => {
     // Toggle the open class on the hamburger menu
     const hamburgerMenu = document.getElementById("hamburger-menu");
     hamburgerMenu.classList.toggle("open");
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleClick1 = () => {
+    const termm = document.getElementById("plus-minus-toggle");
+    termm.classList.toggle("active");
+    setTerm(!term);
+  };
+
+  const handleClick2 = () => {
+    const heal = document.getElementById("plus-minus-toggle2");
+    heal.classList.toggle("active");
+    setHealth(!health);
+  };
+
+  const handleClick3 = () => {
+    const car = document.getElementById("plus-minus-toggle3");
+    car.classList.toggle("active");
+    setMotor(!motor);
+  };
+
+  const handleClick4 = () => {
+    const investment = document.getElementById("plus-minus-toggle4");
+    investment.classList.toggle("active");
+    setInves(!inves);
+  };
+
+  const handleClick5 = () => {
+    const others = document.getElementById("plus-minus-toggle5");
+    others.classList.toggle("active");
+    setOther(!other);
   };
 
   return (
@@ -425,8 +474,7 @@ function Header() {
               <span></span>
             </div>
           </div>
-
-          <div className="menu-list active">
+          <div className={`menu-list ${menuOpen ? "active" : ""}`}>
             <nav className="nav">
               <ul className="nav__list nav-with-support mr-top0">
                 <div className="heading-links">
@@ -442,8 +490,237 @@ function Header() {
                     </i>
                   </label>
                 </li>
+                {hamMenu.map((ele, index) => {
+                  return (
+                    <li className="parent-item ndm" key={index}>
+                      <label>
+                        <span
+                          className={`mobile-menu-bg ${ele.span} setleft`}
+                          style={{ backgroundPosition: ele.pos }}
+                        ></span>
+                        <span className="down-arrow"></span>
+                        {ele.heading}
+                        {ele.text ? (
+                          <i className="smalltext">{ele.text}</i>
+                        ) : (
+                          ""
+                        )}
+                      </label>
+                    </li>
+                  );
+                })}
+              </ul>
+              <ul className="nav__list nav-with-support">
+                <li className="parent-item ndm down-require">
+                  <label for="group-claim">
+                    <span className="mobile-menu-bg renewal setleft"></span>
+                    <span className="down-arrow"></span>
+                    Claim support
+                  </label>
+                </li>
+              </ul>
+              <ul className="nav__list nav-with-support">
+                <li className="parent-item ndm down-require">
+                  <label for="group-claim">
+                    <span className="mobile-menu-bg renewal setleft"></span>
+                    <span className="down-arrow"></span>
+                    Renew Policy
+                  </label>
+                </li>
+              </ul>
+              <ul className="nav__list nav-with-support">
+                <li className="parent-item">
+                  <div className="heading-links">
+                    <span className="badge"> Explore products</span>
+                  </div>
+                  <ul className="group-list">
+                    <li>
+                      <label>
+                        <span className="mobile-menu-bg life setleft"></span>
+                        <div
+                          id="plus-minus-toggle"
+                          onClick={handleClick1}
+                        ></div>
+                        Term Insurance Plan
+                      </label>
+                      <ul className={`sub-group-list-${term ? "active" : ""}`}>
+                        <li>
+                          <a href="/#">
+                            <span>Term Insurance</span>
+                          </a>
+                        </li>
+                        {term_insurance.map((ele, index) => {
+                          return (
+                            <li key={index}>
+                              <a href="/#">
+                                <span>{ele}</span>
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </li>
+                    <li>
+                      <label>
+                        <span className="mobile-menu-bg health setleft"></span>
+                        <div
+                          id="plus-minus-toggle2"
+                          onClick={handleClick2}
+                        ></div>
+                        Health Insurance
+                      </label>
+                      <ul
+                        className={`sub-group-list2-${health ? "active" : ""}`}
+                      >
+                        <li>
+                          <a href="/#">
+                            <span>Health Insurance</span>
+                          </a>
+                        </li>
+                        {health_insurance.map((ele, index) => {
+                          return (
+                            <li key={index}>
+                              <a href="/#">
+                                <span>{ele}</span>
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </li>
+                    <li>
+                      <label>
+                        <span className="mobile-menu-bg car setleft"></span>
+                        <div
+                          id="plus-minus-toggle3"
+                          onClick={handleClick3}
+                        ></div>
+                        Motor Insurance
+                      </label>
+                      <ul
+                        className={`sub-group-list3-${motor ? "active" : ""}`}
+                      >
+                        <li>
+                          <a href="/#">
+                            <span>Car Insurance</span>
+                          </a>
+                        </li>
+                        {car_insurance.map((ele, index) => {
+                          return (
+                            <li key={index}>
+                              <a href="/#">
+                                <span>{ele}</span>
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </li>
+                    <li>
+                      <label>
+                        <span className="mobile-menu-bg investment setleft"></span>
+                        <div
+                          id="plus-minus-toggle4"
+                          onClick={handleClick4}
+                        ></div>
+                        Investment Plans
+                      </label>
+                      <ul
+                        className={`sub-group-list4-${inves ? "active" : ""}`}
+                      >
+                        {investment_plan.map((ele, index) => {
+                          return (
+                            <li key={index}>
+                              <a href="/#">
+                                <span>{ele}</span>
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </li>
+                    <li>
+                      <label>
+                        <span className="mobile-menu-bg other setleft"></span>
+                        <div
+                          id="plus-minus-toggle5"
+                          onClick={handleClick5}
+                        ></div>
+                        Other Insurance
+                      </label>
+                      <ul
+                        className={`sub-group-list5-${other ? "active" : ""}`}
+                      >
+                        {other_insurance.map((ele, index) => {
+                          return (
+                            <li key={index}>
+                              <a href="/#">
+                                <span>{ele}</span>
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
               </ul>
             </nav>
+            <div className="contact-menu mobile_navlist">
+              <div className="heading-links">
+                <span className="badge">Contact Us</span>
+                <ul>
+                  <li>
+                    <div className="wrap-with-icon">
+                      <a href="/#">
+                        <i className="menu-icon-bg whatapp"></i>
+                        <span>Connect on Whatsapp</span>
+                      </a>
+                      <a href="/#">
+                        <i className="menu-icon-bg nearme"></i>
+                        <span className="nearme-add">Stores near you</span>
+                      </a>
+                      <a href="/#">
+                        <i className="menu-icon-bg request-callback"></i>
+                        <span>Request a callback</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="/#">
+                      <i className="menu-icon-bg sales"></i>
+                      <p>Sales: 1800-208-8787</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#">
+                      <i className="menu-icon-bg service"></i>
+                      <p>Service: 1800-258-5970</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#">
+                      <i className="menu-icon-bg claim"></i>
+                      <p>Claims: 1800-258-5881</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#">
+                      <i className="menu-icon-bg viewmore"></i>
+                      <p>View more</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="download-app13 play-store">
+              <p>Download Mobile App</p>
+              <div className="dwn-app">
+                <a href="/#" className="googleplay">
+                  <img src={img} alt=" " style={{ marginBottom: "20px" }} />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div className="logo-pb">

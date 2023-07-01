@@ -48,10 +48,9 @@ function Section7() {
       </a>
       <div className="list">
         <ul className="lisstt">
-          {items.map((ele, index) => {
-            return (
-              <>
-                {}
+          <div>
+            {items.map((ele, index) => {
+              return (
                 <li
                   className="lisstt-item"
                   key={index}
@@ -68,10 +67,9 @@ function Section7() {
                     <p className="text">{ele.text}</p>
                   </div>
                 </li>
-                {/* {index !== items.length - 1 ? <>&ensp;</> : ""} */}
-              </>
-            );
-          })}
+              );
+            })}
+          </div>
         </ul>
       </div>
     </>

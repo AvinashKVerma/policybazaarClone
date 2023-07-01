@@ -236,9 +236,9 @@ function Section10() {
           <p>Leading insurers for your financial freedom</p>
         </div>
         <div className="partnerLogo plr">
-          {item.map((ele) => {
+          {item.map((ele, index) => {
             return (
-              <div className="hjk">
+              <div className="hjk" key={index}>
                 <a href="/#" title={ele.title}>
                   <div className={ele.class}></div>
                 </a>

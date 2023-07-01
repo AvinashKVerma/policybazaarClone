@@ -1,4 +1,5 @@
 import "./Section2.css";
+import React from "react";
 import img5 from "../Resources/img5.avif";
 import img6 from "../Resources/img6.svg";
 
@@ -42,9 +43,9 @@ function Section2() {
   ];
   return (
     <section className="prd-row">
-      {item.map((ele) => {
+      {item.map((ele, index) => {
         return (
-          <>
+          <React.Fragment key={index}>
             <div className={`prd-block ${ele.last ? "tra" : ""}`}>
               <a href="/#">
                 <div className="prd-icon add shadowHandler short">
@@ -61,9 +62,10 @@ function Section2() {
                 </div>
               </a>
             </div>
-          </>
+          </React.Fragment>
         );
       })}
+
       <div className="prd-block mrtop20">
         <a href="/#">
           <div className="prd-icon add shadowHandler short">
@@ -94,8 +96,9 @@ function Section2() {
             className={`prd-block mrtop20 mobile ${ele.mob ? "mobile" : ""} ${
               ele.last && "last"
             }`}
+            key={index}
           >
-            <a href="/#" key={index}>
+            <a href="/#">
               <div className="prd-icon add shadowHandler short">
                 <div className="shadowHandlerBox">
                   <i
@@ -109,6 +112,7 @@ function Section2() {
           </div>
         );
       })}
+
       <div className="view-all-products ">
         <a className="view-all view-all-prd" href="/#">
           View all products
