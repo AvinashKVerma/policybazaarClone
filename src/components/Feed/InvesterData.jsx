@@ -8,10 +8,10 @@ const Investment = [
   { class: "investor-sprite icp", pos: "-315px -178px" },
   { class: "investor-sprite truenorth", pos: "-460px -200px" },
   { class: "investor-sprite softbank", pos: "-617px -200px" },
-  { class: "investor-sprite capital-group", pos: "-310px -348px" },
-  { class: "investor-sprite tencent", pos: "-152px -348px" },
-  { class: "investor-sprite baycapital", pos: "-13px -433px" },
-  { class: "investor-sprite falcon-edge", pos: "-458px -345px" },
-  { class: "investor-sprite ward-ferry", pos: "-617px -348px" },
+  // { class: "investor-sprite capital-group", pos: "-310px -348px" },
+  // { class: "investor-sprite tencent", pos: "-152px -348px" },
+  // { class: "investor-sprite baycapital", pos: "-13px -433px" },
+  // { class: "investor-sprite falcon-edge", pos: "-458px -345px" },
+  // { class: "investor-sprite ward-ferry", pos: "-617px -348px" },
 ];
 export default Investment;

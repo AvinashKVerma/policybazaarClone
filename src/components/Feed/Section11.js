@@ -1,15 +1,47 @@
 import "./Section11";
-import invest1 from "../Resources/invest1.png";
-import invest2 from "../Resources/invest2.png";
+import Slider from "react-slick";
+import Investment from "./InvesterData";
 
 function Section11() {
+  const settings = {
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 1500,
+    autoplaySpeed: 1490,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <>
       <div className="home-inv">
         <div
           style={{
-            marginLeft: "12%",
-            marginTop: "5%",
             fontFamily:
               "Roboto,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif",
           }}
@@ -20,81 +52,21 @@ function Section11() {
           <br />
           <br />
 
-          <div
-            className="marquee"
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              width: "90%",
-            }}
-          >
-            <div
-              style={{
-                width: "300px",
-                height: "100px",
-                backgroundColor: "white",
-                borderRadius: "4px",
-                paddingTop: "30px",
-                paddingLeft: "40px",
-                paddingRight: "40px",
-              }}
-            >
-              <img src={invest1} alt="inv" />
-            </div>
-            <div
-              style={{
-                width: "200px",
-                height: "100px",
-                backgroundColor: "white",
-                borderRadius: "4px",
-                paddingTop: "35px",
-                paddingLeft: "40px",
-                paddingRight: "40px",
-              }}
-            >
-              <img src={invest2} alt="inv" />
-            </div>
-            <div
-              style={{
-                width: "200px",
-                height: "100px",
-                backgroundColor: "white",
-                borderRadius: "4px",
-                paddingTop: "30px",
-                paddingLeft: "40px",
-                paddingRight: "40px",
-              }}
-            >
-              <img src={invest1} alt="inv" />
-            </div>
-            <div
-              style={{
-                width: "200px",
-                height: "100px",
-                backgroundColor: "white",
-                borderRadius: "4px",
-                paddingTop: "35px",
-                paddingLeft: "40px",
-                paddingRight: "40px",
-              }}
-            >
-              <img src={invest2} alt="inv" />
-            </div>
-            <div
-              style={{
-                width: "200px",
-                height: "100px",
-                backgroundColor: "white",
-                borderRadius: "4px",
-                paddingTop: "35px",
-                paddingLeft: "40px",
-                paddingRight: "40px",
-              }}
-            >
-              <img src={invest2} alt="inv" />
-            </div>
-          </div>
+          <Slider {...settings}>
+            {Investment.map((ele, index) => {
+              return (
+                <div className="card" key={index}>
+                  <div className="inv">
+                    <span
+                      style={{ backgroundPosition: `${ele.pos}` }}
+                      alt=""
+                      className={ele.class}
+                    ></span>
+                  </div>
+                </div>
+              );
+            })}
+          </Slider>
         </div>
       </div>
     </>
