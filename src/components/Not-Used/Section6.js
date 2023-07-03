@@ -1,6 +1,7 @@
 import "./Section6.css";
-// import "./Section1.css";
-import Slideshow2 from "./Slideshow2";
+import "./Section1.css";
+// import Slideshow2 from "./Slideshow2";
+import Carousel from "./Carousel";
 import img1 from "../Resources/img19.avif";
 import img2 from "../Resources/img20.avif";
 import img3 from "../Resources/img16.avif";
@@ -22,7 +23,7 @@ function Section6() {
                     <div className="slick-list draggable" aria-live="polite">
                       <div className="slick-track">
                         {" "}
-                        <Slideshow2 images={images} />
+                        <Carousel images={images} />
                       </div>
                     </div>
                   </div>

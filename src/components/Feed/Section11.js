@@ -1,4 +1,4 @@
-import "./Section11";
+import "./Section14.css";
 import Slider from "react-slick";
 import Investment from "./InvesterData";
 

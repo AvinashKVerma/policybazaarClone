@@ -37,7 +37,6 @@ export default class Section14 extends Component {
         ></span>
       );
     });
-    console.log({ arr });
     return (
       <div>
         <h2>Auto Play</h2>
