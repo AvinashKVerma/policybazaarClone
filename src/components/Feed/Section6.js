@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Section6.css";
 import Slider from "react-slick";
 import img1 from "../Resources/img19.avif";
 import img2 from "../Resources/img20.avif";

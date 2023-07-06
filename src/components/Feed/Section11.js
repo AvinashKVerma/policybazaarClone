@@ -1,4 +1,4 @@
-import "./Section14.css";
+import "./Section11.css";
 import Slider from "react-slick";
 import Investment from "./InvesterData";
 
@@ -8,8 +8,8 @@ function Section11() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 1500,
-    autoplaySpeed: 1490,
+    speed: 2500,
+    autoplaySpeed: 2495,
     cssEase: "linear",
     responsive: [
       {

@@ -1,5 +1,5 @@
 import "./Section14.css";
-import Investment from "./InvesterData";
+import Investment from "../Feed/InvesterData";
 import React, { Component } from "react";
 import Slider from "react-slick";
 

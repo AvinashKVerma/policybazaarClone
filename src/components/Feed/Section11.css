@@ -1,59 +1,135 @@
-.home-inv {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.04);
-  height: 270px;
-  margin-bottom: 5%;
+.investor-sprite.tiger {
+  background-position: 0 -45px;
 }
-.marquee {
-  background-color: #ddd;
-  width: 500px;
+.investor-sprite.infoedge {
+  background-position: -155px -45px;
+}
+.investor-sprite.premji {
+  background-position: -305px -45px;
+}
+.investor-sprite.temasek {
+  background-position: -464px -45px;
+}
+.investor-sprite.steadview {
+  background-position: -617px -45px;
+}
+.investor-sprite.chiratae {
+  background-position: -155px -200px;
+}
+.investor-sprite.icp {
+  background-position: -315px -178px;
+  height: 105px;
+}
+.investor-sprite.truenorth {
+  background-position: -460px -200px;
+}
+.investor-sprite.softbank {
+  background-position: -617px -200px;
+}
+.investor-sprite.capital-group {
+  background-position: -310px -348px;
+}
+.investor-sprite.tencent {
+  background-position: -152px -348px;
+}
+.investor-sprite.baycapital {
+  background-position: -13px -433px;
+  background-size: 950px;
+}
+.investor-sprite.falcon-edge {
+  background-position: -458px -345px;
+}
+.investor-sprite.ward-ferry {
+  background-position: -617px -348px;
+}
+
+/*-------------------------------------------------------------------
+-------------------------------------------------------------------*/
+
+.investor-sprite:hover {
+  filter: grayscale(0%);
+}
+.investor-sprite {
+  width: 152px;
+  height: 62px;
   margin: 0 auto;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.marquee div {
   display: inline-block;
-  font-size: 20px;
-  position: relative;
-  left: 100%;
-  animation: marquee 8s linear infinite;
-}
-.marquee:hover div {
-  animation-play-state: paused;
-}
-
-.marquee div:nth-child(1) {
-  animation-delay: 0s;
-}
-.marquee div:nth-child(2) {
-  animation-delay: 0.8s;
-}
-.marquee div:nth-child(3) {
-  animation-delay: 1.6s;
-}
-.marquee div:nth-child(4) {
-  animation-delay: 2.4s;
-}
-.marquee div:nth-child(5) {
-  animation-delay: 3.2s;
+  background: url(../Resources/32.avif) no-repeat;
+  background-size: 769px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
-@keyframes marquee {
-  0% {
-    left: 100%;
+.investor-sprite.tiger {
+  background-position: 0 -45px;
+}
+.investor-sprite.infoedge {
+  background-position: -155px -45px;
+}
+.investor-sprite.premji {
+  background-position: -305px -45px;
+}
+.investor-sprite.temasek {
+  background-position: -464px -45px;
+}
+.investor-sprite.steadview {
+  background-position: -617px -45px;
+}
+.investor-sprite.chiratae {
+  background-position: -155px -200px;
+}
+.investor-sprite.icp {
+  background-position: -315px -178px;
+  height: 105px;
+}
+.investor-sprite.truenorth {
+  background-position: -460px -200px;
+}
+.investor-sprite.softbank {
+  background-position: -617px -200px;
+}
+.investor-sprite.capital-group {
+  background-position: -310px -348px;
+}
+.investor-sprite.tencent {
+  background-position: -152px -348px;
+}
+.investor-sprite.baycapital {
+  background-position: -13px -433px;
+  background-size: 950px;
+}
+.investor-sprite.falcon-edge {
+  background-position: -458px -345px;
+}
+.investor-sprite.ward-ferry {
+  background-position: -617px -348px;
+}
+
+.investor-sprite:hover {
+  filter: grayscale(0%);
+}
+
+@media (min-width: 1024px) {
+  .inv {
+    width: 310px;
   }
-  100% {
-    left: -100%;
-  }
 }
-
-.home-hover-div {
-  position: absolute;
-  width: 1136px;
-  height: 728px;
-  background: #f1f1f1;
-  border-radius: 0px 0px 6px 6px;
-  display: none;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+.inv {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  outline: none;
+  display: inline-block;
+  background: #fff;
+  margin: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 4px;
 }

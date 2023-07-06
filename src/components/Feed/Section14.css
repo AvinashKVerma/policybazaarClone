@@ -55,3 +55,7 @@
 .investor-sprite.ward-ferry {
   background-position: -617px -348px;
 }
+
+.investor-sprite:hover {
+  filter: grayscale(0%);
+}
